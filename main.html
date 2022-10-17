@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+	<head>
+		<title>NW - Nightwalker Blog</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+	</head>
+
+	<body>
+		<header>
+			<link rel="shortcut icon" type="image/x-icon" href="favicon.png" />
+			<a href="main.html" class="logo">nw</a>
+			<ul>
+				<li><a href="main.html" class="active">Home</a></li>
+				<li><a href="login.php">Login</a></li>
+				<li><a href="signup.php">Singup</a></li>
+			</ul>	
+		</header>
+		<section>
+			<img src="stars.png" id="stars">
+			<img src="moon.png" id="moon">
+			<img src="mountains_behind.png" id="mountains_behind">
+			<a href="#sec" id="button">Explore</a>
+			<img src="mountains_front.png" id="mountains_front">
+		</section>
+		<div class="sec" id="sec">
+			<h2>Exploring the Mountains at Night</h2>
+			<p>Want to experience Whistler's mountains in a totally new way?<br><br> When the sun goes down, the mountains feel like a completely new place. Even if you think you know the mountains well, everything looks a lot different at night. Being up there after dark is an unbelievably cool experience that you have to try at least once.<br><br>There are a few different ways to explore the mountains at night. Here are a few of our favourites - night-vision goggles optional.</p><br>
+			<h2>Channel Your Night Cat</h2>
+			<br>
+			<p> If exploring the mountains at night piques your interest, but you'd rather do so without zooming/zipping/plunging around, then you'll definitely want to check out the Snowcat fondue tours. Hop inside of the heated 19-passenger Snowcat, where you'll have the luxury of taking in the views as you make your way up Blackcomb towards the Crystal Hut. <br><br>A delectable meal awaits you, then you get to experience the Snowcat once again on your way down. Feel free to ask questions - your driver knows the ins and outs of the mountains, both by day and night.</p>
+
+			<h2>Bungee in the Dark</h2>
+			<p>Every so often, Whistler Bungee offers nighttime bungee jumps. We can let you know when the next one is expected to take place.
+
+			<br><br>If regular bungee jumping doesn't send your heart racing fast enough, we have a feeling that bungee jumping in the dark will do just the trick. You'll be able to hear the river rushing down below, but you'll have no idea where, exactly it is. Hold on tight and get ready for the adventure of a lifetime!
+			</p>
+		</div>
+		<script>
+			let start = document.getElementById('stars');
+			let moon = document.getElementById('moon');
+			let mountains_behind = document.getElementById('mountains_behind');
+			let text = document.getElementById('text');
+			let button = document.getElementById('button');
+			let mountains_front = document.getElementById('mountains_front');
+			let header = document.querySelector('header');
+			window.addEventListener('scroll', function()
+			{
+				let value = window.scrollY;
+				stars.style.left = value * 0.15 + 'px';
+				moon.style.top = value * 2.00 + 'px';
+				mountains_behind.style.top = value * 0.5 + 'px';
+				mountains_front.style.top = value * 0 + 'px';
+				button.style.marginTop = value * 2.5 + 'px';
+				header.style.top = value * 0.5 + 'px';
+			})
+		</script>
+	</body>
+</html>

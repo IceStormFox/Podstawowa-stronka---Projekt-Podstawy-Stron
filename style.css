@@ -1,0 +1,248 @@
+
+*
+{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: sans-serif;
+	scroll-behavior: smooth;
+}
+body
+{
+	min-height: 100vh;
+	background: linear-gradient(#154c79,#e28743);
+}
+header
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	padding: 30px 100px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	z-index: 1000;
+}
+header .logo
+{
+	color: #ffcc99;
+	font-weight: 800;
+	text-decoration: none;
+	font-size: 3em;
+	text-transform: uppercase;
+}
+header ul
+{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+header ul li
+{
+	list-style: none;
+	margin-left: 40px;	
+}
+header ul li a
+{
+	text-decoration: none;
+	padding: 6px 15px;
+	color: #fff;
+	border-radius: 8px;
+}
+header ul li a:hover, header ul li a.active
+{
+	background: #003366;
+	color: #fff;
+}
+section
+{
+	position: relative;
+	width: 100%;
+	height: 100vh;
+	padding: 100px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
+}
+section::before
+{
+	content: '';
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 100px;
+	background: linear-gradient(to top, #1c0522, transparent);
+	z-index: 1000;
+}
+section img
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	pointer-events: none;
+}
+section label
+{
+	position: relative;
+	margin: 0;
+	padding: 0;
+
+}
+section img#moon
+{
+	mix-blend-mode: screen;
+}
+section img#mountains_front
+{
+	z-index: 10;
+}
+
+#text
+{
+	position: absolute;
+	color: #fff;
+	white-space: nowrap;
+	font-size: 7.5vw;
+	z-index: 9;
+	right: -157px;
+}
+#button
+{
+	text-decoration: none;
+	display: inline-block;
+	padding: 8px 30px;
+	border-radius: 15px;
+	background: #fff;
+	color: #003366;
+	font-size: 1.5em;
+	z-index: 9;
+	transform: translateY(120px);
+}
+.sec
+{
+	position: relative;
+	padding: 100px;
+	background: #1c0522;
+
+}
+.sec h2
+{
+	font-size: 3.5em;
+	margin-bottom: 10px;
+	color: #fff;
+}
+.sec p
+{
+	font-size: 1em;
+	color: #fff;
+}
+.center
+{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 290px;
+	background: linear-gradient(to top, #00264d, transparent);
+	border-radius: 40px;
+}
+.center h3
+{
+	padding: 20px 0px 20px 0px;
+	text-align: center;
+	position: relative;
+	color: #ffcc99;
+	font-weight: 800;
+	text-decoration: none;
+	font-size: 1.6em;
+	text-transform: uppercase;
+	border-bottom: 1px solid silver;
+}
+form .textfield
+{
+	position: relative;
+	border-bottom: 2px solid #adadad;
+	margin: 30px 0px;
+}
+.textfield input
+{
+	width: 100%;
+	padding: 0px 5px;
+	height: 40px;
+	font-size: 16px;
+	border: none;
+	background: none;
+	outline: none;
+}
+
+.textfield label
+{
+	position: absolute;
+	top: 50%;
+	left: 5px;
+	color: #adadad;
+	transform: translateY(-50%);
+	font-size: 16px;
+	pointer-events: none;
+	transition: 0.5s;
+}
+.textfield span::before
+{
+	content: '';
+	position: absolute;
+	top: 40px;
+	left: 0px;
+	width: 0%;
+	height: 2px;
+	background: #2691d9;
+}
+.textfield input:focus ~ label,
+.textfield input:valid ~ label
+{
+	top: -5px;
+	color: #2691d9;
+
+}
+.textfield input:focus ~ span::before,
+.textfield input:valid ~ span::before
+{
+	width: 100%;
+}
+input[type="submit"]
+{
+	width: 100%;
+	height: 50px;
+	border: 1px solid;
+	background: #2691d9;
+	border-radius: 18px;
+	font-size: 17px;
+	color: #e9f4fb;
+	font-weight: 700;
+	cursor: pointer;
+	outline: none;
+}
+input[type="submit"]:hover
+{
+	border-color: #2691d9;
+	transition: 0.3s;
+}
+section a.logout
+{
+	margin-top: 120px;
+	width: 70px;
+	text-align: center;
+	height: 20px;
+	border: 1px solid;
+	background: #2691d9;
+	border-radius: 5px;
+	font-size: 17px;
+	color: #e9f4fb;
+	font-weight: 700;
+	cursor: pointer;
+	outline: none;
+}
